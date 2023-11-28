@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pet API</title>
+</head>
+<body>
+    <h1>Pet API</h1>
+
+    <form onsubmit="event.preventDefault(); getAllPets()">
+      <button type="submit">Get All Pets</button>
+    </form>
+  
+    <form onsubmit="event.preventDefault(); getPetsByName()">
+      <label for="petName">Pet Name:</label>
+      <input type="text" id="petName" required>
+      <button type="submit">Get Pets by Name</button>
+    </form>
+  
+    <form onsubmit="event.preventDefault(); getPetsByOwner()">
+      <label for="ownerName">Owner's Name:</label>
+      <input type="text" id="ownerName" required>
+      <button type="submit">Get Pets by Owner's Name</button>
+    </form>
+  
+    <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
